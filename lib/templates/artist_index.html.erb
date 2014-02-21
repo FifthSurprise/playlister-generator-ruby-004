@@ -5,7 +5,27 @@
   </head>
   <body>
     <h1>All Artists</h1>
-      <% Artist.all.each do |artist|%>
-        <li><a href="_site/artist/<%= artist.url %>"><%= artist.name %></a></li><% end %>
+      <% Artist.all.sort_by!{|x|x.name.downcase}.each do |artist|%>
+        <li>
+          <a href="../artist/<%= artist.url %>">
+            <%= artist.name %></a>
+            Songs : <%= artist.songs.size %>
+          </li><% end %>
+        <h2><%= Artist.all.size %></h2>
   </body>
 </html>
+
+
+
+<!--
+X1. The artist index must list all the artists.
+
+X2. This list must be sorted alphabetically.
+
+X3.Artists total song count should be displayed.
+
+X4. The artist name should link to the artists individual page within site/artists.
+
+5. This page should also say how many Artists there are in total.
+
+ -->
