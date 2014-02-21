@@ -7,7 +7,7 @@
     <h1>All Artists</h1>
       <% Artist.all.sort_by!{|x|x.name.downcase}.each do |artist|%>
         <li>
-          <a href="../artist/<%= artist.url %>">
+          <a href="artist/<%= artist.url %>">
             <%= artist.name %></a>
             Songs : <%= artist.songs.size %>
           </li><% end %>

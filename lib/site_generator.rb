@@ -5,11 +5,13 @@ class SiteGenerator
   def make_artist_index!
     template_doc = File.open("lib/templates/artist_index.html.erb")
     template = ERB.new(template_doc.read)
-    File.write("_site/artist/aaaaartists.html", template.result(binding))
+    File.write("_site/artists.html", template.result(binding))
   end
 
   def make_genre_index!
-    
+    template_doc = File.open("lib/templates/genre_index.html.erb")
+    template = ERB.new(template_doc.read)
+    File.write("_site/genres.html", template.result(binding))
   end
 
   def generate_Artist_Pages
