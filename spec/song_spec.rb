@@ -24,6 +24,10 @@ describe Song do
     song.name = "Jump Around"
     song.name.should eq("Jump Around")
   end
+   it "can have a url" do
+    song.name = "Jump Around"
+    song.url.should eq("jump_around.html")
+  end 
 
   it "can have a genre" do
     song.genre = Genre.new.tap {|g| g.name = "rap"}

@@ -25,5 +25,10 @@ class SiteGenerator
 
   #call each Song to create its own page
   def generate_Song_Pages
+    template_doc = File.open("lib/templates/song.html.erb")
+    template = ERB.new(template_doc.read)
+    Song.all.each do |song|
+      File.write("_site/song/#{song.url}", template.result(binding))
+    end
   end
 end

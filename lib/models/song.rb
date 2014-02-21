@@ -4,6 +4,9 @@ class Song
   def initialize
     ALL.push(self)
   end
+  def url
+    name.downcase.split(' ').join('_').concat(".html")
+  end
 
   def genre= (genre)
     @genre = genre
