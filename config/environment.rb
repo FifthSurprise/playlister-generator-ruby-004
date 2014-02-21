@@ -9,4 +9,4 @@ require_relative '../lib/models/library_parser'
 require_relative '../lib/models/playlister'
 require_relative '../lib/site_generator'
 
-binding.pry
+# binding.pry
