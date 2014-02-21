@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
-require_relative '..config/environment'
+require_relative '../config/environment'
 
-parser = LibraryParser.new(PATH)
+parser = LibraryParser.new(DATA_PATH)
 parser.parse
 
 
@@ -11,5 +11,5 @@ generator = SiteGenerator.new
 generator.make_artist_index!
 generator.make_genre_index!
 
-generator.make_Artist_Pages
-generator.make_Genre_Pages
+generator.generate_Artist_Pages
+generator.generate_Genre_Pages
