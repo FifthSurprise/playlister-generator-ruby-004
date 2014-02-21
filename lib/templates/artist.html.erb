@@ -4,9 +4,9 @@
     <title><%= artist.name %></title>
   </head>
   <body>
-    <h1><%= songs.all.length %> Songs</h1>
-      <%= artist.songs.each_with_index do |song, i| %>
-        <li><a href="_site/songs/<%= song.url %>"><%= i+1 %><%= song.name %></a></li>
+    <h1><%= artist.songs.length %> Songs</h1>
+      <% artist.songs.each_with_index do |song, i| %>
+        <li><a href="_site/songs/<%= song.name %>"><%= i+1 %><%= song.name %></a></li>
       <% end %>
   </body>
 </html>

@@ -6,7 +6,7 @@
   <body>
     <h1>All Artists</h1>
       <%= artists.each_with_index do |artist, i|%>
-        <li><a href="_site/artists/<%= artist.url %>"><%= i+1 %><%= artist.name %></a></li>
+        <li><a href="_site/artist/<%= artist.url %>"><%= i+1 %><%= artist.name %></a></li>
       <% end %>
   </body>
 </html>
