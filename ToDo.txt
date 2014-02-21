@@ -1,20 +1,17 @@
 Chris
-1.)  Update the Artist.rb to have correct url
-2.)  Update generate_Artist_Pages to use Artist.url
-3.)  Create/Update artist.html.erb
+
 Eugene
-4.)  Update the Genre.rb to have correct url
-5.)  Update generate_Genre_Pages to use Genre.url
-6.)  Create/Update genre.html.erb
 Kevin
-7.)  Update the Song.rb to have correct url
-8.)  Update generate_song_Pages to use Song.url
-9.)  Create/Update Song.html.erb
 
 Dennis
-10.)  Runner to start everything off
-11.)  Site_Generator.make_artist_index! needs to generate Artist Index
-12.)  Site_Generator.make_genre_index!needs to generate Genre Index
-13.)  Update Runner to do parsing
+
+-  Site_Generator.make_artist_index! needs to generate Artist Index
+-  Site_Generator.make_genre_index!needs to generate Genre Index
+-  Update erb files to be nice looking
+    - songs
+    - genres
+    - artists
+-  Testing
+-  modules/refactoring
 
 14.) Profit

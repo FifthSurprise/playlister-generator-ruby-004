@@ -5,6 +5,19 @@
   </head>
   <body>
     <h1><%= genre.name %></h1>
-    <img src="http://i.imgur.com/jnVE3KZ.gif">
+    <h2>Songs</h2>
+    <ul>
+    <% genre.songs.each do |song|%>
+    <li><a href = '../song/<%= song.url.gsub("'","&#39;") %>'><%= song.name %></a> 
+    </li>
+    <% end %>
+  </ul>
+    <h2>Artists</h2>
+    <ul>
+    <% genre.artists.each do |artist|%>
+        <li><a href = '../artist/<%= artist.url.gsub("'","&#39;") %>'><%= artist.name %></a> 
+    </li>
+    <% end %>
+  </ul>
   </body>
 </html>
