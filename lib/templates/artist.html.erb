@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Test</title>
+    <title><%= artist.name %></title>
   </head>
   <body>
-    <h1>Test</h1>
+    <h1><%= artist.songs.length %> Songs</h1>
+      <% artist.songs.each_with_index do |song, i| %>
+        <li><a href="_site/songs/<%= song.name %>"><%= i+1 %><%= song.name %></a></li>
+      <% end %>
   </body>
 </html>
