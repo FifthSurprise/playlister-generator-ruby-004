@@ -31,8 +31,8 @@
 #   ]}
 
 #   before do
-#     Movie.reset_movies!
-#     Movie.make_movies!
+#     lp = LibraryParser.new(DATA_PATH)
+#     Artist.reset_all!
 #   end
 
 #   after do
