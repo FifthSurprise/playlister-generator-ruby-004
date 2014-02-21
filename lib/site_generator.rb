@@ -3,7 +3,11 @@ class SiteGenerator
   def initialize
   end
   def make_artist_index!
-
+    template_doc = File.open("lib/templates/artist_index.html.erb")
+    template = ERB.new(template_doc.read)
+    Artist.all.each_with_index do |artist|
+      File.write("_site/artist/#{artists.html}", template.result(binding))
+    end
   end
 
   def make_genre_index!
@@ -15,7 +19,7 @@ class SiteGenerator
     template_doc = File.open("lib/templates/artist.html.erb")
     template = ERB.new(template_doc.read)
     Artist.all.each do |artist|
-      File.write("_site/artist/#{artist.name}", template.result(binding))
+      File.write("_site/artist/#{artist.url}", template.result(binding))
     end
   end
 
