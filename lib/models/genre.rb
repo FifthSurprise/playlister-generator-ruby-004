@@ -28,4 +28,8 @@ class Genre
     Genre.new.name=name if (find_by_name(name).nil?)
     find_by_name(name)
   end
+
+  def url
+    name.downcase.gsub(" ","_")+".html"
+  end
 end

@@ -7,7 +7,7 @@ class SiteGenerator
   end
 
   def make_genre_index!
-
+    
   end
 
   def generate_Artist_Pages
@@ -21,6 +21,11 @@ class SiteGenerator
 
   #call each Genre to create its own page
   def generate_Genre_Pages
+    template_doc = File.open("lib/templates/genre.html.erb")
+    template = ERB.new(template_doc.read)
+    Genre.all.each do |genre|
+      File.write("_site/genre/#{genre.url}", template.result(binding))
+    end
   end
 
   #call each Song to create its own page
