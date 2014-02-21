@@ -24,6 +24,7 @@ describe Song do
     song.name = "Jump Around"
     song.name.should eq("Jump Around")
   end
+  
    it "can have a url" do
     song.name = "Jump Around"
     song.url.should eq("jump_around.html")

@@ -6,6 +6,10 @@ class Artist
     self.songs=[]
     self.genres=[]
   end
+  
+  def url
+     name.downcase.split(' ').join('_').concat(".html")
+  end
 
   def add_song (song)
     #when adding a song, the song should be added to the corresponding genre's song list.

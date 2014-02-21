@@ -19,6 +19,11 @@ describe Artist do
     artist.name.should eq("Adele")
   end
 
+   it "can have a url" do
+    artist.name = "Adele"
+    artist.url.should eq("adele.html")
+  end 
+
   describe "Class methods" do
     it "keeps track of the artists that have been created" do
       Artist.all.should include(artist)
