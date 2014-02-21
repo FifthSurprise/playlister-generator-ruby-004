@@ -2,10 +2,14 @@
 
 require_relative '..config/environment'
 
+parser = LibraryParser.new(PATH)
+parser.parse
 
-Artist.make_artist_index!
-Genre.make_genre_index!
 
+generator = SiteGenerator.new
 
-Artist.make_Artist_Pages
-Genre.make_Genre_Pages
+generator.make_artist_index!
+generator.make_genre_index!
+
+generator.make_Artist_Pages
+generator.make_Genre_Pages
