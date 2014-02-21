@@ -5,7 +5,7 @@
   </head>
   <body>
     <h1><%= song.name %></h1>
-    <a href=<%= song.artist.url %>><h3>Artist: <%= song.artist.name %></a></h3>
+    <a href='../artist/<%= song.artist.url %>'><h3>Artist: <%= song.artist.name %></a></h3>
     <h4><em>Genre: <%= song.genre.name %></em></h4>
   </body>
 </html>
