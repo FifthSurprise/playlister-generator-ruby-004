@@ -35,3 +35,26 @@ class Song
     "#{self.artist.name} - #{self.name} [#{self.genre.name}]"
   end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
