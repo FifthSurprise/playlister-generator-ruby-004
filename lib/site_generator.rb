@@ -7,7 +7,7 @@ class SiteGenerator
   end
 
   def make_genre_index!
-
+    
   end
 
   def generate_Artist_Pages
