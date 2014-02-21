@@ -30,6 +30,6 @@ class Genre
   end
 
   def url
-    name.downcase.gsub(" ","_")+".html"
+    (name.downcase.gsub(" ","_")+".html").gsub("'","")
   end
 end

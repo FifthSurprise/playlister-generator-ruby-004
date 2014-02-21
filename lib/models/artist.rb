@@ -6,13 +6,9 @@ class Artist
     self.songs=[]
     self.genres=[]
   end
-  
-  def url
-     name.downcase.split(' ').join('_').concat(".html")
-  end
 
   def url
-    "#{self.name.downcase.tr(" ", "_").tr("$&.-", "")}.html"
+    "#{self.name.downcase.tr(" ", "_").tr("$&.-", "")}.html".gsub("'","")
   end
 
   def add_song (song)

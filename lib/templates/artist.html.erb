@@ -4,9 +4,19 @@
     <title><%= artist.name %></title>
   </head>
   <body>
-    <h1><%= artist.songs.length %> Songs</h1>
-      <% artist.songs.each_with_index do |song, i| %>
-        <li><a href="_site/songs/<%= song.name %>"><%= i+1 %><%= song.name %></a></li>
-      <% end %>
+    <h1><%= artist.name %></h1>
+    <h2>Songs: <%= artist.songs.size %> </h2>
+    <ul>
+    <% artist.songs.each do |song|%>
+    <li><a href = '../song/<%= song.url.gsub("'","&#39;") %>'><%= song.name %></a> 
+    </li>
+    <% end %>
+  </ul>
+    <h2>Genres: <%= artist.genres.size %></h2>
+    <ul>
+    <% artist.genres.each do |genre|%>
+        <li><a href = '../genre/<%= genre.url.gsub("'","&#39;") %>'><%= genre.name %></a> 
+    </li>
+    <% end %>
   </body>
 </html>
