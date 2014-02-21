@@ -5,7 +5,7 @@ class Song
     ALL.push(self)
   end
   def url
-    name.downcase.split(' ').join('_').concat(".html").gsub("'","&#39;")
+    name.downcase.split(' ').join('_').concat(".html").gsub("'","")
   end
 
   def genre= (genre)
