@@ -8,7 +8,7 @@ class Artist
   end
   
   def url
-     name.downcase.split(' ').join('_').concat(".html")
+     name.downcase.split(' ').join('_').concat(".html").gsub("'","&#39;")
   end
 
   def url
