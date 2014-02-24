@@ -8,9 +8,9 @@
       <% Genre.all.sort_by!{|x|x.name.downcase}.each do |genre|%>
         <li>
           <a href="genre/<%= genre.url %>">
-            <%= genre.name %></a>
+            <%= genre.name.capitalize %></a>
             Songs : <%= genre.songs.size %>
           </li><% end %>
-        <h2><%= Genre.all.size %></h2>
+        <h2><%= Genre.all.size %> total genres</h2>
   </body>
 </html>

@@ -15,7 +15,7 @@
     <h2>Genres: <%= artist.genres.size %></h2>
     <ul>
     <% artist.genres.each do |genre|%>
-        <li><a href = '../genre/<%= genre.url.gsub("'","&#39;") %>'><%= genre.name %></a> 
+        <li><a href = '../genre/<%= genre.url.gsub("'","&#39;") %>'><%= genre.name.capitalize %></a> 
     </li>
     <% end %>
   </body>

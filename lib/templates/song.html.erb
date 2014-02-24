@@ -7,6 +7,6 @@
     <h1><%= song.name %></h1>
     <a href='../artist/<%= song.artist.url %>'><h3>Artist: <%= song.artist.name %></h3></a>
     <h4>
-      <a href='../genre/<%= song.genre.url %>'><em>Genre: <%= song.genre.name %></em></h4></a>
+      <a href='../genre/<%= song.genre.url %>'><em>Genre: <%= song.genre.name.capitalize %></em></h4></a>
   </body>
 </html>
